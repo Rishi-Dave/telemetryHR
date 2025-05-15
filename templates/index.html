@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP Telemetry Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="dashboard">
+        <header class="header">
+            <h1>ESP Telemetry Dashboard</h1>
+            <div class="connection-status">
+                <span class="status-dot"></span>
+                <span class="status-text">Connected</span>
+            </div>
+        </header>
+
+        <div class="data-log">
+            <h3>Live Data Log</h3>
+            <div class="log-content">
+                <!-- Log entries will be populated here -->
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
