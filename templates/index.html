@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ESP Telemetry Dashboard</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta http-equiv="refresh" content="1">
 </head>
 <body>
     <div class="dashboard">
@@ -20,6 +21,9 @@
             <h3>Live Data Log</h3>
             <div class="log-content">
                 <!-- Log entries will be populated here -->
+    
+                <h1>Voltage vs. Time (Last 60 Seconds)</h1>
+                <img src="/plot.png" alt="Voltage vs. Time Graph">
             </div>
         </div>
     </div>

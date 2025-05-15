@@ -90,12 +90,19 @@ def generate_graph():
         voltage_data = voltage_data[-MAX_DATA_POINTS:]
 
     # Create the plot
-    plt.figure(figsize=(10, 6))
-    plt.plot(time_data, voltage_data)
-    plt.title('Voltage vs. Time (Last {} Seconds)'.format(MAX_DATA_POINTS))
-    plt.xlabel('Time (s)')
-    plt.ylabel('Voltage (mV)')
-    plt.grid(True)
+    plt.figure(figsize=(10, 6), facecolor='black')  # Set figure background to black
+    ax = plt.gca()
+    ax.set_facecolor('black')  # Set axes background to black
+    plt.plot(time_data, voltage_data, color='white') #make the line white
+    plt.xlabel('Time (s)', color='white')
+    plt.ylabel('Voltage (mV)', color='white')
+    plt.grid(True, color='gray')  # Lighter grid color
+    ax.tick_params(axis='x', colors='white')    # Make x axis ticks white
+    ax.tick_params(axis='y', colors='white')    # Make y axis ticks white
+    ax.spines['bottom'].set_color('white')
+    ax.spines['top'].set_color('white')
+    ax.spines['left'].set_color('white')
+    ax.spines['right'].set_color('white')
 
     # Save the plot to a BytesIO object (in memory)
     buffer = BytesIO()

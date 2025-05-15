@@ -77,7 +77,7 @@ body {
 }
 
 .log-content {
-    height: 450px;
+    height: 800px;
     background-color: var(--bg-primary);
     border-radius: 5px;
     padding: 1rem;
